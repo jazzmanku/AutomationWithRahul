@@ -1,8 +1,6 @@
-package framework.testcases.tests;
+package testing.tests;
 
 import org.testng.annotations.*;
-
-import static framework.testcases.tests.Utility.*;
 
 public class BaseTest {
 

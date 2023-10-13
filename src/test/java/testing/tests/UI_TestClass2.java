@@ -1,4 +1,4 @@
-package framework.testcases.tests;
+package testing.tests;
 
 import org.testng.annotations.Test;
 

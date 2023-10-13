@@ -1,4 +1,4 @@
-package framework.testcases.tests;
+package testing.tests;
 
 public class Utility {
     public static void OpenBrowser_NavigateToURL(){

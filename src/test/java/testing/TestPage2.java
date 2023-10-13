@@ -1,4 +1,4 @@
-package framework.testcases;
+package testing;
 
 import framework.BaseTest;
 import org.openqa.selenium.By;
