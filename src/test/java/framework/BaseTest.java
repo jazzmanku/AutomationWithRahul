@@ -6,18 +6,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
 import java.time.Duration;
 
 import static framework.Constants.*;
 
 public class BaseTest {
-    protected WebDriver driver;
-
+    protected static WebDriver driver;
 
     @BeforeMethod
     @Parameters({"browserType", "headless", "incognito"})
@@ -29,10 +25,13 @@ public class BaseTest {
         else
             driver = setup(CHROME_BROWSER, APP_URL_2, headless, incognito);
         driver.get(APP_URL_2);
+        System.out.println("Launching: " + driver);
+
     }
 
     @AfterMethod
     public void stopTesting() throws InterruptedException {
+        System.out.println("Closing : "  + driver);
         tearDown(driver);
     }
 
@@ -108,6 +107,8 @@ public class BaseTest {
     }
     public void tearDown(WebDriver driver) throws InterruptedException {
         Thread.sleep(1000);
-        driver.quit();
+        if (driver == null) {
+            driver.quit();
+        }
     }
 }

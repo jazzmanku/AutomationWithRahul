@@ -26,7 +26,7 @@ public class TestCaseWelcomePage extends BaseTest {
         Thread.sleep(2000);
     }
 
-    @Test(enabled = false)
+    @Test
     public void TC02_TestCheckBoxes() throws InterruptedException {
 
         scrollBy(1000, driver);
@@ -55,7 +55,7 @@ public class TestCaseWelcomePage extends BaseTest {
 
     }
 
-    @Test(enabled = false)
+    @Test
     public void TC03_TestDropDown() throws InterruptedException {
 
         scrollBy(1000, driver);
@@ -68,7 +68,7 @@ public class TestCaseWelcomePage extends BaseTest {
 
     }
 
-    @Test(enabled = false)
+    @Test
     public void TC04_TestFillInFields() throws InterruptedException {
 
         By byId = By.id("Email");
@@ -78,9 +78,9 @@ public class TestCaseWelcomePage extends BaseTest {
         WebElement numberSelector = driver.findElement(By.id("Enter_any_number_between__1_to_100"));
         numberSelector.sendKeys("14");
 
-        WebElement favorite = driver.findElement(By.id("Favorite_Website_"));
-        favorite.sendKeys("Google.ca");
-        Thread.sleep(675);
+//        WebElement favorite = driver.findElement(By.id("Favorite_Website_"));
+//        favorite.sendKeys("Google.ca");
+//        Thread.sleep(675);
 
         scrollBy(500, driver);
 
@@ -118,7 +118,7 @@ public class TestCaseWelcomePage extends BaseTest {
 
         Thread.sleep(3500);
     }
-    @Test(enabled = false)
+    @Test
     public void TC05_TestTimeRelated() throws InterruptedException {
     WebElement date = driver.findElement(By.id("Today_s_Date_"));
         date.click();
